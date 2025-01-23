@@ -15,12 +15,14 @@ class TokenValidationService extends MonologLogger
         $logger->info("Validating token");
 
         if (!$this->isValidToken($requestToken)) {
+            $logger->error("Invalid token");
             return null;
         }
 
         $tokens = $this->tokenDataProvider->getTokens();
         foreach ($tokens as $t) {
             if ($t["token"] === $requestToken) {
+                $logger->info("Token found");
                 return $t;
             }
         }

@@ -14,9 +14,9 @@ class AuthorizationTokenFetcherService
         $authorizationHeader = $serverRequest->getHeaderLine('Authorization');
 
         if (preg_match('/Bearer\s(\S+)/', $authorizationHeader, $matches)) {
-            return $matches[1]; // Return the token part of the Authorization header
+            return $matches[1];
         }
 
-        return TokenConst::NO_TOKEN; // Return a constant if no token is provided
+        return TokenConst::NO_TOKEN;
     }
 }
