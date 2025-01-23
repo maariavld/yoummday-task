@@ -1,26 +1,12 @@
 <?php return array (
   0 => 
   array (
+    'GET' => 
+    array (
+      '/has_permission' => 'App\\Handler\\PermissionHandler',
+    ),
   ),
   1 => 
   array (
-    'GET' => 
-    array (
-      0 => 
-      array (
-        'regex' => '~^(?|/has_permission/([^/]+))$~',
-        'routeMap' => 
-        array (
-          2 => 
-          array (
-            0 => 'App\\Handler\\PermissionHandler',
-            1 => 
-            array (
-              'token' => 'token',
-            ),
-          ),
-        ),
-      ),
-    ),
   ),
 );
