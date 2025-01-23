@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: yoummday_refactoring_task
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1337:1337"
+    volumes:
+      - .:/app
+    command: sh -c "composer install --ignore-platform-req=ext-yaml && php src/main.php"
