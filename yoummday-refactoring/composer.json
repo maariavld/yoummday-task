@@ -3,7 +3,11 @@
   "description": "Coding interview refactoring task",
   "type": "project",
   "require": {
-    "progphil1337/simple-react-app": "dev-main"
+    "progphil1337/simple-react-app": "dev-main",
+    "symfony/http-foundation": "^7.2",
+    "symfony/routing": "7.2",
+    "symfony/dependency-injection": "7.2",
+    "monolog/monolog": "3.8"
   },
   "license": "MIT",
   "autoload": {
